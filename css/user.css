@@ -65,3 +65,11 @@ font
   color: #555;
   font-style: italic;
 }
+/* footer: make the last-update line larger and bolder */
+.last-update {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #706f6f;
+  margin-top: 0.5rem;
+  display: block;
+}

@@ -65,6 +65,13 @@ font
   color: #555;
   font-style: italic;
 }
+.last-update {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #706f6f;
+  margin-top: 0.5rem;
+  display: block;
+}
 .page pre,
 .page .highlight {
   overflow: auto;
