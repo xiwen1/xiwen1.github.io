@@ -73,3 +73,33 @@ font
   margin-top: 0.5rem;
   display: block;
 }
+html,
+body {
+  height: 100%;
+  background-color: #ccddec;
+}
+/* Keep the content card white so header and page card remain unchanged */
+.page,
+.page.home {
+  background-color: #f0f8ff !important;
+  padding: 1.6rem;
+}
+/* Ensure header and all card-like blocks remain white (do not inherit site background) */
+#page_header,
+.header,
+.header_wrap,
+.site-header,
+.theme-header {
+  background-color: #f0f8ff !important;
+}
+/* Common card selectors used by Academia theme */
+.card,
+.card-wrap,
+.side-card,
+.post,
+article,
+.entry,
+.post-body {
+  background-color: #f0f8ff !important;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02) inset;
+}
