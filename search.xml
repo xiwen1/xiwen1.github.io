@@ -1,43 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2023-3-20</title>
-    <url>/2023/03/20/2023-3-20/</url>
-    <content><![CDATA[<p>曾几何时，我还愿意去想象一些纯粹的梦想。<br>
-我愿意写诗，我愿意为一场清雨唏嘘，我愿意尽己所能，用最灵动的词句歌唱自我。<br>
-我会做错的选择，我也会为失败消沉，我会一遍遍的怀疑，我是否真的有做梦的资格。<br>
-我会愿意为在靠近梦想一点挣扎，我会愿意在每一次愧对与自己的期待之后，告诉自己，你真的赢面很大。<br>
-我原以为与其不切实际的挣扎，不如真正认清自己，少一些痛苦，多一些自得。<br>
-哪有那么多自得，我再不自觉中遗忘掉的，没有那些脆弱与自卑，只有愿意真正相信自己的勇气，或者错觉。<br>
-我宁愿相信错觉。<br>
-我宁愿一遍又一遍的忽悠自己，虽然你没有做到，但梦想真的有可能，我应该，再一次又一次，一天又一天，一遍又一遍，每时每刻的告诉自己：你所做的一切，都有一个极为梦幻了理由：为了梦想，青春也不过这些时光。</p>
-<p>这是2023-3-20的日记，徯璺</p>
-]]></content>
-      <categories>
-        <category>diary</category>
-      </categories>
-      <tags>
-        <tag>diary</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>home</title>
-    <url>/2024/03/07/home/</url>
-    <content><![CDATA[<p>Hi there! My name is Kewei Zhang (张可为). I am a fourth-year CS undergraduate student in the AIM Lab at Wuhan University, under the supervision of Prof. Zheng Wang. I am expected to enroll at Peking University in Fall 2026, supervised by Prof. Daquan Zhou.</p>
-<p>My research interests lie in <strong>Visual Content Generation</strong>, <strong>Efficient AI</strong>, and <strong>Trustworthy AI</strong>. Additionally, I am passionate about AI-driven computer applications and have accumulated technical expertise in AI-related software development.</p>
-<p>Visit <a href="https://scholar.google.com/citations?user=cFk7BcAAAAAJ&amp;hl=en">my google scholar profile</a> for most recent publications. For any suggestions or collaborations, please reach out to me at <a href="mailto:xiwen.kwzhang@gmail.com">xiwen.kwzhang@gmail.com</a>.</p>
-<h1>🔥News</h1>
-<ul>
-<li><span style="text-decoration: underline; font-weight: bold;">07/2025</span>   one <a href="https://dl.acm.org/doi/abs/10.1145/3746027.3755016">paper</a> is accepted by <strong>ACM MM 2025</strong>.</li>
-<li><span style="text-decoration: underline; font-weight: bold;">06/2025</span>   one <a href="https://arxiv.org/abs/2506.23711">paper</a> is accepted by <strong>ICCV 2025</strong>.</li>
-<li><span style="text-decoration: underline; font-weight: bold;">10/2024</span>   one <a href="https://camera-agnostic.github.io/">paper</a> is accepted by <strong>NeurIPS 2024</strong>.</li>
-<li><span style="text-decoration: underline; font-weight: bold;">09/2024</span>   I am honored to have received the <b>Lei Jun Computer Scholarship</b> <mark>(Top 1%)</mark>.</li>
-<li><span style="text-decoration: underline; font-weight: bold;">10/2023</span>   one <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=cFk7BcAAAAAJ&amp;citation_for_view=cFk7BcAAAAAJ:u5HHmVD_uO8C">paper</a> is accepted by <strong>ACM MM 2023</strong>.</li>
-<li><span style="text-decoration: underline; font-weight: bold;">09/2023</span>   I am honored to have received the <b>National Scholarship</b> <mark>(Top 1%)</mark>.</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
     <title>kmp算法学习笔记</title>
     <url>/2023/01/02/kmp%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1>kmp算法</h1>
@@ -79,30 +42,41 @@
       </tags>
   </entry>
   <entry>
-    <title>yolo系列以及mmdetection代码阅读</title>
-    <url>/2023/07/11/yolov7%E4%BB%A3%E7%A0%81%E9%98%85%E8%AF%BB/</url>
-    <content><![CDATA[<p>最近一个工作需要大量对比不同的计算机视觉检测模型，需要使用到一个指标ASR，即Attack Successful Rate, 攻击成功率，这个指标需要使用到tp(true positives), 然而tp这个指标通常大部分检测模型不会默认给出, 在yolov5等系列中, 你可以在val.py中轻松找到相应的指标并手动打印, yolov7中并没有给出tp这个变量, 但是依然可以依葫芦画瓢拿到这一变量, 然而事情到了mmdetection中就大为不同, 不同于专精于行人检测的yolo系列, mmdetection是一个极为庞大包罗万象的检测库, 其代码层次结构复杂, 想获得对应的指标, 少不了一场代码阅读.</p>
-<h1>计算tp(true positives)的方法</h1>
-<p>在yolov5中，正例数是直接通过<code>tp = (recall * number_targets).round()</code>计算得到的，在各个检测库中，recall通常是会给出的，这时候只需要想办法获得number_targets的值也就是真正例数的数量，就可以计算出tp(recall(召回率) = tp / (tp + fn)，tp + fn即是真正正例的个数)</p>
-<h2 id="关于视觉检测库常见指标的解释"><a class="header-anchor" href="#关于视觉检测库常见指标的解释">null</a>关于视觉检测库常见指标的解释</h2>
-]]></content>
-      <tags>
-        <tag>科技</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>“关于多巴胺脱瘾”</title>
-    <url>/2023/02/16/%E2%80%9C%E5%85%B3%E4%BA%8E%E5%A4%9A%E5%B7%B4%E8%83%BA%E8%84%B1%E7%98%BE%E2%80%9D/</url>
-    <content><![CDATA[<h2 id="每天都上自己的博客看看吧"><a class="header-anchor" href="#每天都上自己的博客看看吧">null</a>每天都上自己的博客看看吧</h2>
-<p>当代互联网上琳琅满目的娱乐方式极大的提高了线代人们的多巴胺阈值, 在我自己的人生经历中, 这种感觉变得愈发的明显<span id="more"></span> 从小时候能够看到电视就会十分兴奋, 再到对b站的各种视频持续性的上瘾, 再到这些东西不再能让我感到快乐, 每一天都生活变得愈发麻木, 这样的坏处显而易见, 那就是我对于学习这样的事情的耐心和兴趣变得愈发的淡薄, 对于在学习技术与编程的过程中所遇到的困难愈发变得抗拒.</p>
-<p>于是, 多巴胺脱瘾, 这就是我为自己所指定的目标, 就是要培养自己的自控能力, 并在这个过程中努力避免来自新媒体以及游戏的高多巴胺刺激内容的诱惑, 这个过程会无聊到感到痛苦, 但是, 痛苦本身就往往意味着成长. 成长并不都是好事, 但是时间不会等人, 走到现在, 我愈发感觉到, 想要被自己真正认可究竟是多么困难的一件事情, 我已经让自己失望过了无数次, 前面的无数次我也是这么说的, 但是没有外界明显的压力的情况下人就是会这样不断的朝着低级娱乐的方向前进, 但这和我们自己的目标是绝对相互矛盾的, 我们不能被别人逼着走, 我尤为讨厌这种失去控制权的感觉, 所以, 我定下每天日记的计划, 让每一天的我都能够回顾自己前一天的所思所想, 自己逼迫自己去不断的反思纠正, 一旦发现有堕落的迹象就要以此文为例, 勉励自己.</p>
+    <title>2023-3-20</title>
+    <url>/2023/03/20/2023-3-20/</url>
+    <content><![CDATA[<p>曾几何时，我还愿意去想象一些纯粹的梦想。<br>
+我愿意写诗，我愿意为一场清雨唏嘘，我愿意尽己所能，用最灵动的词句歌唱自我。<br>
+我会做错的选择，我也会为失败消沉，我会一遍遍的怀疑，我是否真的有做梦的资格。<br>
+我会愿意为在靠近梦想一点挣扎，我会愿意在每一次愧对与自己的期待之后，告诉自己，你真的赢面很大。<br>
+我原以为与其不切实际的挣扎，不如真正认清自己，少一些痛苦，多一些自得。<br>
+哪有那么多自得，我再不自觉中遗忘掉的，没有那些脆弱与自卑，只有愿意真正相信自己的勇气，或者错觉。<br>
+我宁愿相信错觉。<br>
+我宁愿一遍又一遍的忽悠自己，虽然你没有做到，但梦想真的有可能，我应该，再一次又一次，一天又一天，一遍又一遍，每时每刻的告诉自己：你所做的一切，都有一个极为梦幻了理由：为了梦想，青春也不过这些时光。</p>
+<p>这是2023-3-20的日记，徯璺</p>
 ]]></content>
       <categories>
         <category>diary</category>
       </categories>
       <tags>
-        <tag>随记</tag>
+        <tag>diary</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>home</title>
+    <url>/2024/03/07/home/</url>
+    <content><![CDATA[<p>Hi there! My name is Kewei Zhang (张可为). I am a fourth-year CS undergraduate student in the AIM Lab at Wuhan University, under the supervision of Prof. <a href="https://wangzwhu.github.io/home/">Zheng Wang</a>. I am expected to enroll at Peking University in Fall 2026, supervised by Prof. <a href="https://zhoudaquan.github.io/homepage.io/">Daquan Zhou</a>.</p>
+<p>My research interests lie in <strong>Visual Content Generation</strong>, <strong>Efficient AI</strong>, and <strong>Trustworthy AI</strong>. Additionally, I am passionate about AI-driven computer applications and have accumulated technical expertise in AI-related software development.</p>
+<p>Visit <a href="https://scholar.google.com/citations?user=cFk7BcAAAAAJ&amp;hl=en">my google scholar profile</a> for most recent publications. For any suggestions or collaborations, please reach out to me at <a href="mailto:xiwen.kwzhang@gmail.com">xiwen.kwzhang@gmail.com</a>.</p>
+<h1>🔥News</h1>
+<ul>
+<li><span style="text-decoration: underline; font-weight: bold;">07/2025</span>   one <a href="https://dl.acm.org/doi/abs/10.1145/3746027.3755016">paper</a> is accepted by <strong>ACM MM 2025</strong>.</li>
+<li><span style="text-decoration: underline; font-weight: bold;">06/2025</span>   one <a href="https://arxiv.org/abs/2506.23711">paper</a> is accepted by <strong>ICCV 2025</strong>.</li>
+<li><span style="text-decoration: underline; font-weight: bold;">10/2024</span>   one <a href="https://camera-agnostic.github.io/">paper</a> is accepted by <strong>NeurIPS 2024</strong>.</li>
+<li><span style="text-decoration: underline; font-weight: bold;">09/2024</span>   I am honored to have received the <b>Lei Jun Computer Scholarship</b> <mark>(Top 1%)</mark>.</li>
+<li><span style="text-decoration: underline; font-weight: bold;">10/2023</span>   one <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=cFk7BcAAAAAJ&amp;citation_for_view=cFk7BcAAAAAJ:u5HHmVD_uO8C">paper</a> is accepted by <strong>ACM MM 2023</strong>.</li>
+<li><span style="text-decoration: underline; font-weight: bold;">09/2023</span>   I am honored to have received the <b>National Scholarship</b> <mark>(Top 1%)</mark>.</li>
+</ul>
+]]></content>
   </entry>
   <entry>
     <title>不开long long见祖宗</title>
@@ -133,6 +107,20 @@
       </categories>
       <tags>
         <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>“关于多巴胺脱瘾”</title>
+    <url>/2023/02/16/%E2%80%9C%E5%85%B3%E4%BA%8E%E5%A4%9A%E5%B7%B4%E8%83%BA%E8%84%B1%E7%98%BE%E2%80%9D/</url>
+    <content><![CDATA[<h2 id="每天都上自己的博客看看吧"><a class="header-anchor" href="#每天都上自己的博客看看吧">null</a>每天都上自己的博客看看吧</h2>
+<p>当代互联网上琳琅满目的娱乐方式极大的提高了线代人们的多巴胺阈值, 在我自己的人生经历中, 这种感觉变得愈发的明显<span id="more"></span> 从小时候能够看到电视就会十分兴奋, 再到对b站的各种视频持续性的上瘾, 再到这些东西不再能让我感到快乐, 每一天都生活变得愈发麻木, 这样的坏处显而易见, 那就是我对于学习这样的事情的耐心和兴趣变得愈发的淡薄, 对于在学习技术与编程的过程中所遇到的困难愈发变得抗拒.</p>
+<p>于是, 多巴胺脱瘾, 这就是我为自己所指定的目标, 就是要培养自己的自控能力, 并在这个过程中努力避免来自新媒体以及游戏的高多巴胺刺激内容的诱惑, 这个过程会无聊到感到痛苦, 但是, 痛苦本身就往往意味着成长. 成长并不都是好事, 但是时间不会等人, 走到现在, 我愈发感觉到, 想要被自己真正认可究竟是多么困难的一件事情, 我已经让自己失望过了无数次, 前面的无数次我也是这么说的, 但是没有外界明显的压力的情况下人就是会这样不断的朝着低级娱乐的方向前进, 但这和我们自己的目标是绝对相互矛盾的, 我们不能被别人逼着走, 我尤为讨厌这种失去控制权的感觉, 所以, 我定下每天日记的计划, 让每一天的我都能够回顾自己前一天的所思所想, 自己逼迫自己去不断的反思纠正, 一旦发现有堕落的迹象就要以此文为例, 勉励自己.</p>
+]]></content>
+      <categories>
+        <category>diary</category>
+      </categories>
+      <tags>
+        <tag>随记</tag>
       </tags>
   </entry>
   <entry>
@@ -208,61 +196,6 @@
       </categories>
       <tags>
         <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于一道集合性状压dp的题目</title>
-    <url>/2023/01/03/%E5%85%B3%E4%BA%8E%E4%B8%80%E9%81%93%E9%9B%86%E5%90%88%E6%80%A7%E7%8A%B6%E5%8E%8Bdp%E7%9A%84%E9%A2%98%E7%9B%AE/</url>
-    <content><![CDATA[<h2 id="愤怒的小鸟（集合性状压dp）"><a class="header-anchor" href="#愤怒的小鸟（集合性状压dp）">null</a>愤怒的小鸟（集合性状压dp）</h2>
-<p>题目链接： <a href="https://www.acwing.com/problem/content/526/">524. 愤怒的小鸟 - AcWing题库</a></p>
-<p>在题目条件下，两个点可以确定一条过原点的抛物线，有n个点，那么就可以预处理出n^2条抛物线，然后再预处理出每条抛物线最多经过多少个点，以及是哪些点。</p>
-<span id="more"></span>
-<p>这是一个重复覆盖问题，与之相对的就是精确覆盖问题；<br>
-这两个问题都已经有的最优解法：dancing links 这是一种数据结构（十字链表），可以优化dfs爆搜；</p>
-<p>但是dancing links没学，这里用状压dp去达到相似的效果，优化爆搜；<br>
-爆搜的核心是：顺序，要以那种顺序枚举所有方案。以爆搜为基础思考优化方案；</p>
-<p>优化方法：记忆化搜索（状压dp），注意到每一个state传入dfs函数都会唯一对应一个res解，因此我们可以使用一个f[state]将其存储下来<strong>避免重复计算</strong>。</p>
-<p>x代表为当前state中未被覆盖的一列，path表示一条可以覆盖当前列的抛物线，new_state就可以用上述的公式求得。</p>
-<p>两个过程的区别就是引入状压dp之后，有些已经被计算过的state再dfs再次遇到的时候不会被重复再计算一遍，大概可以优化一半多。<br>
-f中存储的就是当前状态下最少的抛物线数；<br>
-遇到相同的状态但是线数更多的时候就会被直接排除掉；<br>
-看看拦截导弹那一题；<br>
-path i, j 表示由第i个与第j个猪创建的抛物线经过了那些猪，使用二进制表示。</p>
-<p>最后再总结一下这道题目的思路：</p>
-<ol>
-<li>
-<p>使用pair读入个点；</p>
-</li>
-<li>
-<p>利用任意两个点的位置求出抛物线集合path i, j i与j代表选择了第i和j个点，path中存储的是其经过的所有猪的二进制表达；</p>
-</li>
-<li>
-<p>设置f为0x3f，f0 为0；</p>
-</li>
-<li>
-<p>枚举所有的当前猪的位置情况（二进制）i，循环每一种情况中没有被干掉的猪x，枚举所有包含这个猪的抛物线path x, j，那么最终的状态转移方程就是：<br>
-<code>f[i | path[x][j]] = min(f[i | path[i][j]], f[i]+1)</code></p>
-</li>
-</ol>
-<p>这样的状态转移方程的思想就是，将每一个f通过可以由哪一条合法的抛物线转移过来进行状态划分；所以这里以终点进行枚举，因为通过终点反推其组合时困难的；</p>
-<p>但是这里可以不采用集合的思想，将这道题看作一种记忆化搜索可以更便于你的理解；</p>
-<p>看一下如果爆搜当前任意一个抛物线时是否有更好的选择（f中的min），否则就将f更新为<code>f[i] + 1</code>，这样当就可以减去不必要的分枝，不行的转移方案直接剪掉，减少搜索花费；</p>
-<ol start="5">
-<li>
-<p>另外需要注意一点，double比较的时候有可能出现误差，需要自己再写一个cmp函数用于比较；</p>
-</li>
-<li>
-<p>fabs函数用于求浮点数的绝对值；<br>
-代码如下：</p>
-</li>
-</ol>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> x first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> y second</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="type">double</span>, <span class="type">double</span>&gt; PDD;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">18</span>, M = <span class="number">1</span> &lt;&lt; <span class="number">18</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">double</span> eps = <span class="number">1e-8</span>; <span class="comment">//这里</span></span><br><span class="line"></span><br><span class="line">PDD q[N];</span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">int</span> f[M];</span><br><span class="line"><span class="type">int</span> path[N][N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">cmp</span><span class="params">(<span class="type">double</span> a, <span class="type">double</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">fabs</span>(a - b) &lt; eps) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(a &lt; b) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> T;</span><br><span class="line">    cin&gt;&gt;T;</span><br><span class="line">    <span class="keyword">while</span>(T--)</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">            cin&gt;&gt;q[i].x&gt;&gt;q[i].y;</span><br><span class="line">        <span class="built_in">memset</span>(path, <span class="number">0</span>, <span class="keyword">sizeof</span> path); <span class="comment">//记得每一次都要恢复原样</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            path[i][i] = <span class="number">1</span> &lt;&lt; i;<span class="comment">//防一手只给一个点的情况</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;n; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="type">double</span> x1 = q[i].x, y1 = q[i].y;</span><br><span class="line">                <span class="type">double</span> x2 = q[j].x, y2 = q[j].y;</span><br><span class="line">                <span class="keyword">if</span>(!<span class="built_in">cmp</span>(x1, x2)) <span class="keyword">continue</span>;  <span class="comment">// 在同一列的两个点不能作为构建抛物线的点</span></span><br><span class="line">                <span class="type">double</span> a = (y1 / x1 - y2 / x2) / (x1 - x2);</span><br><span class="line">                <span class="type">double</span> b = y1 / x1 - a * x1;</span><br><span class="line">                 <span class="comment">//if(a &gt; 0) continue; 这个写法被坑了一手</span></span><br><span class="line">                <span class="keyword">if</span>(<span class="built_in">cmp</span>(a, <span class="number">0</span>) &gt;= <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">                <span class="type">int</span> state = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> k=<span class="number">0</span>; k&lt;n; k++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="type">double</span> x3 = q[k].x, y3 = q[k].y;</span><br><span class="line">                    <span class="keyword">if</span>(!<span class="built_in">cmp</span>(a* x3 * x3 + b * x3, y3)) state += <span class="number">1</span> &lt;&lt; k;</span><br><span class="line">                &#125;</span><br><span class="line">                path[i][j] = state; <span class="comment">//全部抛物线预处理完成；</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">memset</span>(f, <span class="number">0x3f</span>, <span class="keyword">sizeof</span> f); <span class="comment">//求最小值，初始化为inf；</span></span><br><span class="line">        f[<span class="number">0</span>] = <span class="number">0</span>; <span class="comment">//一只猪没杀需要的抛物线数为0</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i<span class="number">+1</span> &lt; <span class="number">1</span> &lt;&lt; n; i++) <span class="comment">//dp基操，上来先将f的每一维按照一定顺序枚举一遍；同时全为1的状态不需要枚举，</span></span><br><span class="line">        &#123;                               <span class="comment">//因为就是答案，后面已经计算出来了</span></span><br><span class="line">            <span class="type">int</span> x = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;n; j++)<span class="comment">//检查一下哪一位为空</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>((i &gt;&gt; j &amp; <span class="number">1</span>) == <span class="number">0</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    x = j;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;n; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                f[i | path[x][j]] = <span class="built_in">min</span>(f[i | path[x][j]], f[i] + <span class="number">1</span>); <span class="comment">//多思考一下这个状态转移方程是怎么来的</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;f[(<span class="number">1</span> &lt;&lt; n) - <span class="number">1</span>]&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -384,6 +317,61 @@ next[tot] = head[x], head[x] = tot; 这样的操作。</p>
       </tags>
   </entry>
   <entry>
+    <title>关于一道集合性状压dp的题目</title>
+    <url>/2023/01/03/%E5%85%B3%E4%BA%8E%E4%B8%80%E9%81%93%E9%9B%86%E5%90%88%E6%80%A7%E7%8A%B6%E5%8E%8Bdp%E7%9A%84%E9%A2%98%E7%9B%AE/</url>
+    <content><![CDATA[<h2 id="愤怒的小鸟（集合性状压dp）"><a class="header-anchor" href="#愤怒的小鸟（集合性状压dp）">null</a>愤怒的小鸟（集合性状压dp）</h2>
+<p>题目链接： <a href="https://www.acwing.com/problem/content/526/">524. 愤怒的小鸟 - AcWing题库</a></p>
+<p>在题目条件下，两个点可以确定一条过原点的抛物线，有n个点，那么就可以预处理出n^2条抛物线，然后再预处理出每条抛物线最多经过多少个点，以及是哪些点。</p>
+<span id="more"></span>
+<p>这是一个重复覆盖问题，与之相对的就是精确覆盖问题；<br>
+这两个问题都已经有的最优解法：dancing links 这是一种数据结构（十字链表），可以优化dfs爆搜；</p>
+<p>但是dancing links没学，这里用状压dp去达到相似的效果，优化爆搜；<br>
+爆搜的核心是：顺序，要以那种顺序枚举所有方案。以爆搜为基础思考优化方案；</p>
+<p>优化方法：记忆化搜索（状压dp），注意到每一个state传入dfs函数都会唯一对应一个res解，因此我们可以使用一个f[state]将其存储下来<strong>避免重复计算</strong>。</p>
+<p>x代表为当前state中未被覆盖的一列，path表示一条可以覆盖当前列的抛物线，new_state就可以用上述的公式求得。</p>
+<p>两个过程的区别就是引入状压dp之后，有些已经被计算过的state再dfs再次遇到的时候不会被重复再计算一遍，大概可以优化一半多。<br>
+f中存储的就是当前状态下最少的抛物线数；<br>
+遇到相同的状态但是线数更多的时候就会被直接排除掉；<br>
+看看拦截导弹那一题；<br>
+path i, j 表示由第i个与第j个猪创建的抛物线经过了那些猪，使用二进制表示。</p>
+<p>最后再总结一下这道题目的思路：</p>
+<ol>
+<li>
+<p>使用pair读入个点；</p>
+</li>
+<li>
+<p>利用任意两个点的位置求出抛物线集合path i, j i与j代表选择了第i和j个点，path中存储的是其经过的所有猪的二进制表达；</p>
+</li>
+<li>
+<p>设置f为0x3f，f0 为0；</p>
+</li>
+<li>
+<p>枚举所有的当前猪的位置情况（二进制）i，循环每一种情况中没有被干掉的猪x，枚举所有包含这个猪的抛物线path x, j，那么最终的状态转移方程就是：<br>
+<code>f[i | path[x][j]] = min(f[i | path[i][j]], f[i]+1)</code></p>
+</li>
+</ol>
+<p>这样的状态转移方程的思想就是，将每一个f通过可以由哪一条合法的抛物线转移过来进行状态划分；所以这里以终点进行枚举，因为通过终点反推其组合时困难的；</p>
+<p>但是这里可以不采用集合的思想，将这道题看作一种记忆化搜索可以更便于你的理解；</p>
+<p>看一下如果爆搜当前任意一个抛物线时是否有更好的选择（f中的min），否则就将f更新为<code>f[i] + 1</code>，这样当就可以减去不必要的分枝，不行的转移方案直接剪掉，减少搜索花费；</p>
+<ol start="5">
+<li>
+<p>另外需要注意一点，double比较的时候有可能出现误差，需要自己再写一个cmp函数用于比较；</p>
+</li>
+<li>
+<p>fabs函数用于求浮点数的绝对值；<br>
+代码如下：</p>
+</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> x first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> y second</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="type">double</span>, <span class="type">double</span>&gt; PDD;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">18</span>, M = <span class="number">1</span> &lt;&lt; <span class="number">18</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">double</span> eps = <span class="number">1e-8</span>; <span class="comment">//这里</span></span><br><span class="line"></span><br><span class="line">PDD q[N];</span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">int</span> f[M];</span><br><span class="line"><span class="type">int</span> path[N][N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">cmp</span><span class="params">(<span class="type">double</span> a, <span class="type">double</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">fabs</span>(a - b) &lt; eps) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(a &lt; b) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> T;</span><br><span class="line">    cin&gt;&gt;T;</span><br><span class="line">    <span class="keyword">while</span>(T--)</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">            cin&gt;&gt;q[i].x&gt;&gt;q[i].y;</span><br><span class="line">        <span class="built_in">memset</span>(path, <span class="number">0</span>, <span class="keyword">sizeof</span> path); <span class="comment">//记得每一次都要恢复原样</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            path[i][i] = <span class="number">1</span> &lt;&lt; i;<span class="comment">//防一手只给一个点的情况</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;n; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="type">double</span> x1 = q[i].x, y1 = q[i].y;</span><br><span class="line">                <span class="type">double</span> x2 = q[j].x, y2 = q[j].y;</span><br><span class="line">                <span class="keyword">if</span>(!<span class="built_in">cmp</span>(x1, x2)) <span class="keyword">continue</span>;  <span class="comment">// 在同一列的两个点不能作为构建抛物线的点</span></span><br><span class="line">                <span class="type">double</span> a = (y1 / x1 - y2 / x2) / (x1 - x2);</span><br><span class="line">                <span class="type">double</span> b = y1 / x1 - a * x1;</span><br><span class="line">                 <span class="comment">//if(a &gt; 0) continue; 这个写法被坑了一手</span></span><br><span class="line">                <span class="keyword">if</span>(<span class="built_in">cmp</span>(a, <span class="number">0</span>) &gt;= <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">                <span class="type">int</span> state = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> k=<span class="number">0</span>; k&lt;n; k++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="type">double</span> x3 = q[k].x, y3 = q[k].y;</span><br><span class="line">                    <span class="keyword">if</span>(!<span class="built_in">cmp</span>(a* x3 * x3 + b * x3, y3)) state += <span class="number">1</span> &lt;&lt; k;</span><br><span class="line">                &#125;</span><br><span class="line">                path[i][j] = state; <span class="comment">//全部抛物线预处理完成；</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">memset</span>(f, <span class="number">0x3f</span>, <span class="keyword">sizeof</span> f); <span class="comment">//求最小值，初始化为inf；</span></span><br><span class="line">        f[<span class="number">0</span>] = <span class="number">0</span>; <span class="comment">//一只猪没杀需要的抛物线数为0</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i<span class="number">+1</span> &lt; <span class="number">1</span> &lt;&lt; n; i++) <span class="comment">//dp基操，上来先将f的每一维按照一定顺序枚举一遍；同时全为1的状态不需要枚举，</span></span><br><span class="line">        &#123;                               <span class="comment">//因为就是答案，后面已经计算出来了</span></span><br><span class="line">            <span class="type">int</span> x = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;n; j++)<span class="comment">//检查一下哪一位为空</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>((i &gt;&gt; j &amp; <span class="number">1</span>) == <span class="number">0</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    x = j;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;n; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                f[i | path[x][j]] = <span class="built_in">min</span>(f[i | path[x][j]], f[i] + <span class="number">1</span>); <span class="comment">//多思考一下这个状态转移方程是怎么来的</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;f[(<span class="number">1</span> &lt;&lt; n) - <span class="number">1</span>]&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>背包问题：能量石</title>
     <url>/2022/12/31/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%EF%BC%9A%E8%83%BD%E9%87%8F%E7%9F%B3/</url>
     <content><![CDATA[<h1>能量石</h1>
@@ -399,6 +387,18 @@ next[tot] = head[x], head[x] = tot; 这样的操作。</p>
       </categories>
       <tags>
         <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>yolo系列以及mmdetection代码阅读</title>
+    <url>/2023/07/11/yolov7%E4%BB%A3%E7%A0%81%E9%98%85%E8%AF%BB/</url>
+    <content><![CDATA[<p>最近一个工作需要大量对比不同的计算机视觉检测模型，需要使用到一个指标ASR，即Attack Successful Rate, 攻击成功率，这个指标需要使用到tp(true positives), 然而tp这个指标通常大部分检测模型不会默认给出, 在yolov5等系列中, 你可以在val.py中轻松找到相应的指标并手动打印, yolov7中并没有给出tp这个变量, 但是依然可以依葫芦画瓢拿到这一变量, 然而事情到了mmdetection中就大为不同, 不同于专精于行人检测的yolo系列, mmdetection是一个极为庞大包罗万象的检测库, 其代码层次结构复杂, 想获得对应的指标, 少不了一场代码阅读.</p>
+<h1>计算tp(true positives)的方法</h1>
+<p>在yolov5中，正例数是直接通过<code>tp = (recall * number_targets).round()</code>计算得到的，在各个检测库中，recall通常是会给出的，这时候只需要想办法获得number_targets的值也就是真正例数的数量，就可以计算出tp(recall(召回率) = tp / (tp + fn)，tp + fn即是真正正例的个数)</p>
+<h2 id="关于视觉检测库常见指标的解释"><a class="header-anchor" href="#关于视觉检测库常见指标的解释">null</a>关于视觉检测库常见指标的解释</h2>
+]]></content>
+      <tags>
+        <tag>科技</tag>
       </tags>
   </entry>
   <entry>
