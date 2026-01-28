@@ -2,8 +2,6 @@
  * Content
  ******************************************************************************/
 
-@use "variables" as v;
-
 body {
   padding-bottom: 70px;
   color: var(--global-text-color);
@@ -30,7 +28,7 @@ body.sticky-bottom-footer {
 }
 
 .container {
-  max-width: v.$max-content-width;
+  max-width: $max-content-width;
 }
 
 // Profile
@@ -53,3 +51,96 @@ body.sticky-bottom-footer {
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+
+/*****************************************************************************
+* Social Links Section
+*****************************************************************************/
+
+.social-links-section {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: var(--global-theme-color);
+    color: var(--global-bg-color);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+
+    &:hover {
+      background-color: var(--global-hover-color);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    i {
+      margin: 0;
+    }
+  }
+}
+
+/*****************************************************************************
+* News Section
+*****************************************************************************/
+
+.news {
+  margin-bottom: 2rem; // Add spacing between news and selected publications
+  margin-top: 1rem;
+
+  .table-responsive {
+    max-height: 300px !important; // Override inline style for more compact height
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+    padding: 0.5rem;
+    display: block;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--global-bg-color);
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--global-theme-color);
+      border-radius: 4px;
+
+      &:hover {
+        background: var(--global-hover-color);
+      }
+    }
+
+    // For Firefox
+    scrollbar-width: thin;
+    scrollbar-color: var(--global-theme-color) var(--global-bg-color);
+  }
+
+  table {
+    margin-bottom: 0;
+
+    tr {
+      th {
+        font-size: 0.875rem;
+        color: var(--global-text-color-light);
+      }
+
+      td {
+        font-size: 0.95rem;
+      }
+    }
+  }
+}
+
