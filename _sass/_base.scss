@@ -357,6 +357,12 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin-left: 0.75rem;
+}
+
 .navbar-toggler {
   .icon-bar {
     display: block;
