@@ -8,10 +8,9 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  # more_info: >
-  #   <p>AIM Lab</p>
-  #   <p>Wuhan University</p>
-  #   <p>Wuhan, China</p>
+  more_info: >
+    <p>Me at Kaifeng City</p>
+  
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -33,7 +32,7 @@ My research interests lie in **AIGC**, **dVLM** and **Efficient AI**. Additional
 
 Visit [my google scholar profile](https://scholar.google.com/citations?user=cFk7BcAAAAAJ&hl=en) for most recent publications. For any suggestions or collaborations, please reach out to me at xiwen.kwzhang@gmail.com.
 
----
+
 
 <div class="social-links-section">
   <a href="mailto:xiwen.kwzhang@gmail.com" class="social-link" title="Email">
@@ -47,4 +46,3 @@ Visit [my google scholar profile](https://scholar.google.com/citations?user=cFk7
   </a>
 </div>
 
----
