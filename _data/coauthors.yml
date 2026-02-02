@@ -1,34 +1,38 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"zhang":
+  - firstname: ["Kewei", "K.", "K. W.", "Kewei"]
+    url: https://xiwen1.github.io
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"hou":
+  - firstname: ["Jiaqi", "J.", "J. H.", "Jiaqi"]
+    url: https://hallucinatie.github.io/
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"huang":
+  - firstname: ["Ye"]
+    url: https://yeyeah.life/
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"zhou":
+  - firstname: ["Daquan"]
+    url: https://zhoudaquan.github.io/homepage.io/
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"xie":
+  - firstname: ["Enze"]
+    url: https://xieenze.github.io/
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"chen":
+  - firstname: ["Junsong"]
+    url: "https://lawrence-cj.github.io/"
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"ling":
+  - firstname: ["Huan"]
+    url: "https://www.cs.toronto.edu/~linghuan/"
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"wang":
+  - firstname: ["Zheng"]
+    url: "https://wangzwhu.github.io/home/"
+  - firstname: ["Zhixiang"]
+    url: "https://lightchaserx.github.io/"
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"wei":
+  - firstname: ["Hui"]
+    url: "https://weihui1308.github.io/"
+
