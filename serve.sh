@@ -1,1 +1,1 @@
-jekyll serve --trace --verbose
+jekyll serve --trace 

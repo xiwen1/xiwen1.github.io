@@ -1,0 +1,27 @@
+<!-- ClusterMaps Pageviews -->
+<div class="pageviews-map-section">
+  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=YOUR_CLUSTRMAPS_ID&cl=ffffff&w=a"></script>
+</div>
+
+<style>
+.pageviews-map-section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 0;
+  border-top: 1px solid var(--global-divider-color, #e0e0e0);
+  display: flex;
+  justify-content: center;
+}
+
+.pageviews-map-section iframe,
+.pageviews-map-section > script + * {
+  max-width: 100%;
+}
+
+@media (max-width: 576px) {
+  .pageviews-map-section {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+</style>
