@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: CS Undergraduate @ <a href='https://www.pku.edu.cn/'>Peking University</a>
+subtitle: Graduate Student @ <a href='https://www.pku.edu.cn/'>Peking University</a>
 
 profile:
   align: right
@@ -29,9 +29,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi there! My name is Kewei Zhang (张可为). I am a fourth-year CS undergraduate student at Wuhan University, under the supervision of Prof. [Zheng Wang](https://wangzwhu.github.io/home/). I am expected to enroll at Peking University in Fall 2026, supervised by Prof. [Daquan Zhou](https://zhoudaquan.github.io/homepage.io/). I am currently a member of [DAGroup](https://github.com/DAGroup-PKU).
+Hi there! My name is Kewei Zhang (张可为). I am currently a graduate student in Computer Science at Peking University, supervised by Prof. [Daquan Zhou](https://zhoudaquan.github.io/homepage.io/), and a member of [DAGroup](https://github.com/DAGroup-PKU). Before joining PKU, I studied Computer Science at Wuhan University under the supervision of Prof. [Zheng Wang](https://wangzwhu.github.io/home/).
 
-My research interests lie in **AIGC**, **dVLM** and **Efficient AI**. Additionally, I am passionate about AI-driven computer applications and have accumulated technical expertise in AI-related software development.
+My research interests lie in **AIGC**, **Embodied AI**, and **Efficient AI**. Additionally, I am passionate about AI-driven computer applications and have accumulated technical expertise in AI-related software development.
 
 Visit [my google scholar profile](https://scholar.google.com/citations?user=cFk7BcAAAAAJ&hl=en) for most recent publications. For any suggestions or collaborations, please reach out to me at xiwen.kwzhang@gmail.com.
 
@@ -48,4 +48,3 @@ Visit [my google scholar profile](https://scholar.google.com/citations?user=cFk7
     <i class="fas fa-graduation-cap"></i>
   </a>
 </div>
-

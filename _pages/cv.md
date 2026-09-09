@@ -10,15 +10,15 @@ description: Curriculum Vitae
 
 ## About Me
 
-I am **Kewei Zhang** (张可为), an undergraduate student in Computer Science at Wuhan University. My research interests focus on **AIGC (AI-Generated Content)**, **Efficient AI**, and **Trustworthy AI**.
+I am **Kewei Zhang** (张可为), a graduate student in Computer Science at Peking University. My research interests focus on **AIGC (AI-Generated Content)**, **Embodied AI**, and **Efficient AI**.
 
-I am passionate about advancing artificial intelligence through innovative research and developing practical solutions that make AI more efficient, reliable, and accessible. My work spans multiple areas of modern AI, with particular emphasis on generative models, computational efficiency, and AI safety.
+I am passionate about advancing artificial intelligence through innovative research and developing practical solutions that connect generative intelligence with the physical world. My work spans generative models, embodied intelligence, and computational efficiency.
 
 ### Research Interests
 
 - **AI-Generated Content (AIGC)**: Exploring generative models, content synthesis, and creative AI applications
+- **Embodied AI**: Building intelligent agents that perceive, reason, and act in the physical world
 - **Efficient AI**: Developing resource-efficient algorithms and model compression techniques
-- **Trustworthy AI**: Focusing on AI safety, robustness, interpretability, and ethical considerations
 
 ### Contact & Links
 
