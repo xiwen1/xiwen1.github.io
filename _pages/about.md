@@ -11,7 +11,6 @@ profile:
   more_info: >
     <p>Me at Kaifeng City</p>
 
-
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 wechat: true # enables the WeChat QR code buttons and dialog
@@ -34,9 +33,13 @@ Hi there! My name is Kewei Zhang (张可为). I am currently a graduate student 
 
 My research interests lie in **AIGC**, **Embodied AI**, and **Efficient AI**. Additionally, I am passionate about AI-driven computer applications and have accumulated technical expertise in AI-related software development.
 
-Visit [my google scholar profile](https://scholar.google.com/citations?user=cFk7BcAAAAAJ&hl=en) for most recent publications. For any suggestions or collaborations, you are always welcome to reach out via **[email](mailto:xiwen.kwzhang@gmail.com)** or <button type="button" class="wechat-text-link wechat-trigger" aria-label="Show WeChat QR code" aria-controls="wechat-modal" aria-expanded="false">WeChat</button>.
+Visit [my google scholar profile](https://scholar.google.com/citations?user=cFk7BcAAAAAJ&hl=en) for most recent publications.
 
-
+<div class="contact-callout">
+  For any suggestions or collaborations, you are always welcome to reach out via
+  <strong><a href="mailto:xiwen.kwzhang@gmail.com">email</a></strong> or
+  <button type="button" class="wechat-text-link wechat-trigger" aria-label="Show WeChat QR code" aria-controls="wechat-modal" aria-expanded="false">WeChat</button>.
+</div>
 
 <div class="social-links-section">
   <a href="mailto:xiwen.kwzhang@gmail.com" class="social-link" title="Email">

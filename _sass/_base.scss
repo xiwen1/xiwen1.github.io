@@ -535,6 +535,22 @@ body.wechat-modal-open {
   overflow: hidden;
 }
 
+.contact-callout {
+  overflow: hidden;
+  margin: 1.25rem 0 1.75rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--global-tip-block);
+  border-left-width: 0.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--global-tip-block-bg);
+  color: var(--global-tip-block-text);
+
+  a,
+  .wechat-text-link {
+    color: var(--global-tip-block-title);
+  }
+}
+
 .wechat-text-link {
   padding: 0;
   border: 0;
