@@ -69,10 +69,14 @@ body.sticky-bottom-footer {
     justify-content: center;
     width: 3rem;
     height: 3rem;
+    padding: 0;
+    border: 0;
     border-radius: 50%;
     background-color: var(--global-theme-color);
     color: var(--global-bg-color);
     font-size: 1.5rem;
+    font-family: inherit;
+    cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
 

@@ -83,3 +83,7 @@ layout: default
     {% endif %}
   </article>
 </div>
+
+{% if page.wechat %}
+  {% include wechat_modal.liquid %}
+{% endif %}

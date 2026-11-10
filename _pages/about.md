@@ -14,6 +14,7 @@ profile:
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
+wechat: true # enables the WeChat QR code buttons and dialog
 pageviews_map: true # includes a global pageviews map
 chart:
   echarts: true # enable echarts for pageviews map
@@ -47,4 +48,7 @@ Visit [my google scholar profile](https://scholar.google.com/citations?user=cFk7
   <a href="https://scholar.google.com/citations?user=cFk7BcAAAAAJ&hl=en" class="social-link" title="Google Scholar" target="_blank" rel="noopener noreferrer">
     <i class="fas fa-graduation-cap"></i>
   </a>
+  <button type="button" class="social-link wechat-trigger" title="WeChat" aria-label="Show WeChat QR code" aria-controls="wechat-modal" aria-expanded="false">
+    <i class="fab fa-weixin" aria-hidden="true"></i>
+  </button>
 </div>

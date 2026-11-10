@@ -22,7 +22,21 @@
         </a>
       {% elsif site.enable_navbar_social %}
         <!-- Social Icons -->
-        <div class="navbar-brand social">{% social_links %}</div>
+        <div class="navbar-brand social">
+          {% social_links %}
+          {% if page.wechat %}
+            <button
+              type="button"
+              class="navbar-social-button wechat-trigger"
+              title="WeChat"
+              aria-label="Show WeChat QR code"
+              aria-controls="wechat-modal"
+              aria-expanded="false"
+            >
+              <i class="fa-brands fa-weixin" aria-hidden="true"></i>
+            </button>
+          {% endif %}
+        </div>
       {% endif %}
       <!-- Navbar Toggle -->
       <button
