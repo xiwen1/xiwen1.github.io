@@ -535,6 +535,20 @@ body.wechat-modal-open {
   overflow: hidden;
 }
 
+.wechat-text-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--global-theme-color);
+  font: inherit;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--global-hover-color);
+    text-decoration: underline;
+  }
+}
+
 // Footer
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
