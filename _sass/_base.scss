@@ -541,6 +541,7 @@ body.wechat-modal-open {
   background: transparent;
   color: var(--global-theme-color);
   font: inherit;
+  font-weight: bold;
   cursor: pointer;
 
   &:hover {

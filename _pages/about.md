@@ -34,7 +34,7 @@ Hi there! My name is Kewei Zhang (张可为). I am currently a graduate student 
 
 My research interests lie in **AIGC**, **Embodied AI**, and **Efficient AI**. Additionally, I am passionate about AI-driven computer applications and have accumulated technical expertise in AI-related software development.
 
-Visit [my google scholar profile](https://scholar.google.com/citations?user=cFk7BcAAAAAJ&hl=en) for most recent publications. For any suggestions or collaborations, you are always welcome to reach out via [email](mailto:xiwen.kwzhang@gmail.com) or <button type="button" class="wechat-text-link wechat-trigger" aria-label="Show WeChat QR code" aria-controls="wechat-modal" aria-expanded="false">WeChat</button>.
+Visit [my google scholar profile](https://scholar.google.com/citations?user=cFk7BcAAAAAJ&hl=en) for most recent publications. For any suggestions or collaborations, you are always welcome to reach out via **[email](mailto:xiwen.kwzhang@gmail.com)** or <button type="button" class="wechat-text-link wechat-trigger" aria-label="Show WeChat QR code" aria-controls="wechat-modal" aria-expanded="false">WeChat</button>.
 
 
 
