@@ -45,7 +45,7 @@ Visit [my google scholar profile](https://scholar.google.com/citations?user=cFk7
   <a href="mailto:xiwen.kwzhang@gmail.com" class="social-link" title="Email">
     <i class="fas fa-envelope"></i>
   </a>
-  <a href="https://github.com/kewei-zhang" class="social-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/xiwen1" class="social-link" title="GitHub" target="_blank" rel="noopener noreferrer">
     <i class="fab fa-github"></i>
   </a>
   <a href="https://scholar.google.com/citations?user=cFk7BcAAAAAJ&hl=en" class="social-link" title="Google Scholar" target="_blank" rel="noopener noreferrer">
